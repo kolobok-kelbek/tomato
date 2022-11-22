@@ -8,11 +8,19 @@ package di
 
 import (
 	"github.com/kolobok-kelbek/go-example-service/infra"
+	"github.com/kolobok-kelbek/go-example-service/infra/config"
+	"github.com/kolobok-kelbek/go-example-service/static"
 )
 
 // Injectors from wire.go:
 
 func Init() *infra.App {
-	app := infra.NewApp()
+	fs := _wireFSValue
+	configConfig := config.Load(fs)
+	app := infra.NewApp(configConfig)
 	return app
 }
+
+var (
+	_wireFSValue = static.Snapshot
+)

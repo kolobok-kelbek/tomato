@@ -1,9 +1,7 @@
 package infra
 
 import (
-	"github.com/kolobok-kelbek/cong"
 	"github.com/kolobok-kelbek/go-example-service/infra/config"
-	"github.com/kolobok-kelbek/go-example-service/static"
 	"net/http"
 )
 
@@ -11,19 +9,10 @@ type App struct {
 	config *config.Config
 }
 
-func NewApp() *App {
-	// TODO: logger
-	app := &App{}
-
-	loader := cong.NewLoader[config.Config]()
-	cfg, err := loader.LoadFromEmbedFSByPath("ExampleService", static.Snapshot, "config", cong.YamlExt)
-	if err != nil {
-		panic(err)
+func NewApp(config *config.Config) *App {
+	return &App{
+		config: config,
 	}
-
-	app.config = cfg
-
-	return app
 }
 
 func (app *App) Run() {
