@@ -9,6 +9,7 @@ package di
 import (
 	"github.com/kolobok-kelbek/go-example-service/infra"
 	"github.com/kolobok-kelbek/go-example-service/infra/config"
+	"github.com/kolobok-kelbek/go-example-service/infra/logger"
 	"github.com/kolobok-kelbek/go-example-service/static"
 )
 
@@ -17,7 +18,8 @@ import (
 func Init() *infra.App {
 	fs := _wireFSValue
 	configConfig := config.Load(fs)
-	app := infra.NewApp(configConfig)
+	sugaredLogger := logger.NewLogger()
+	app := infra.NewApp(configConfig, sugaredLogger)
 	return app
 }
 
