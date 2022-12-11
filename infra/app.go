@@ -1,8 +1,8 @@
 package infra
 
 import (
-	"github.com/kolobok-kelbek/go-example-service/infra/config"
-	"github.com/kolobok-kelbek/go-example-service/infra/logger"
+	"github.com/kolobok-kelbek/tomato/infra/config"
+	"github.com/kolobok-kelbek/tomato/infra/logger"
 	"net/http"
 	"os"
 	"os/signal"

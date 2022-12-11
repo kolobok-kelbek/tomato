@@ -7,10 +7,10 @@
 package di
 
 import (
-	"github.com/kolobok-kelbek/go-example-service/infra"
-	"github.com/kolobok-kelbek/go-example-service/infra/config"
-	"github.com/kolobok-kelbek/go-example-service/infra/logger"
-	"github.com/kolobok-kelbek/go-example-service/static"
+	"github.com/kolobok-kelbek/tomato/infra"
+	"github.com/kolobok-kelbek/tomato/infra/config"
+	"github.com/kolobok-kelbek/tomato/infra/logger"
+	"github.com/kolobok-kelbek/tomato/static"
 )
 
 // Injectors from wire.go:

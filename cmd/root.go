@@ -7,7 +7,7 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "go-example-service",
+	Use:   "tomato",
 	Short: "Golang example service",
 	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 		return nil

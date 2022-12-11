@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/kolobok-kelbek/go-example-service/di"
+	"github.com/kolobok-kelbek/tomato/di"
 	"github.com/spf13/cobra"
 	"os"
 )

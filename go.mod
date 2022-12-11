@@ -1,4 +1,4 @@
-module github.com/kolobok-kelbek/go-example-service
+module github.com/kolobok-kelbek/tomato
 
 go 1.19
 
